@@ -1,0 +1,1 @@
+const tseslint=require('@typescript-eslint/eslint-plugin'); module.exports=[{files:['**/*.ts'],plugins:{'@typescript-eslint':tseslint},rules:{'no-unused-vars':'off','@typescript-eslint/no-unused-vars':['error',{argsIgnorePattern:'^_'}]}}];
