@@ -35,3 +35,7 @@ npm run seed
 
 ## Data model
 Six core tables: `users`, `benefit_plans`, `enrollments`, `claims`, `claim_events`, and `dependents`. SQL migration is in `db/migrations/001_init.sql`.
+
+## Example operations
+
+Login with `mutation { login(email: "employee@example.com", password: "Password123!") { token user { id fullName role } } }`. Send the returned token as `Authorization: Bearer <token>`. Employees can use `myClaims` and `submitClaim`; HR admins can use `claims` and `reviewClaim`.
