@@ -12,4 +12,4 @@ RUN npm install --omit=dev
 COPY --from=build /app/dist ./dist
 COPY db ./db
 EXPOSE 4000
-CMD ["node","dist/src/index.js"]
+CMD ["sh","-c","node dist/src/db/migrate.js && node dist/src/db/seed.js && node dist/src/index.js"]
